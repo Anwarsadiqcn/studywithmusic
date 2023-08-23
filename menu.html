@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>listen to music with Anwar</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+      <div class="container">
+        <div class="sidebar">
+        <img src="/img/logo.png" class="logo">
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">CALMNESS</a></li>
+            <li><a href="#">LISTEN</a></li>
+          </ul>
+        </div>
+          <div class="content">
+              <div class="left-col">
+                <h1>KEEP YOUR<br> MIND CLEAN <br>AND FRESH</h1>
+              </div>
+              <div class="right-col">
+                <p>Click here to start study</p>
+                <img src="/img/open-book.png" id="icon">
+              </div>
+          </div>
+      </div>
+
+      <audio id="mySong">
+        <source src="/img/song.mp3" type="audio/mp3">
+      </audio>
+  <script>
+    var mySong = document.getElementById("mySong");
+    var icon = document.getElementById("icon");
+
+        icon.onclick = function(){
+          if(mySong.paused){
+              mySong.play();
+              icon.src="/img/close-book .png"; 
+          }else{
+              mySong.pause();
+              icon.src="/img/open-book.png"; 
+          }
+        }
+  </script>
+    </body>
+</html>
